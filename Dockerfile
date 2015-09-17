@@ -1,4 +1,4 @@
-FROM evargas/jenkins-slave:latest
+FROM evarga/jenkins-slave:latest
 
 # update is currently ran without cleanup in original
 RUN : apt-get update \
