@@ -1,6 +1,5 @@
 FROM evarga/jenkins-slave:latest
 
-# update is currently ran without cleanup in original
-RUN : apt-get update \
+RUN apt-get update \
     && apt-get install -y git \
-    && :
+    && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
